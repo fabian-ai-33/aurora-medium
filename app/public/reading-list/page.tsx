@@ -3,7 +3,6 @@
 import { useBookContext } from "@/context/BookContext";
 import { Button } from "@/components/ui/button";
 import { BookCard } from "../../book";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Link from "next/link";
 import { Ban as BanIcon } from "lucide-react";
 
@@ -12,9 +11,7 @@ export default function PublicReadingList() {
     const {
         books,
         readingList,
-        removeFromReadingList,
         sharingEnabled,
-        toggleSharing,
     } = useBookContext();
 
     const readingBooks = books.filter((book) =>

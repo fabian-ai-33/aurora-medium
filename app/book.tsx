@@ -9,7 +9,6 @@ import {
 import { Button } from "@/components/ui/button";
 import {
   Eye as EyeIcon,
-  Plus as PlusIcon,
 } from "lucide-react";
 
 import { useBookContext } from "@/context/BookContext";
@@ -28,7 +27,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 
 
@@ -42,7 +40,7 @@ interface BookCardProps {
 }
 
 export function BookCard({ title, author, imageUrl, id }: BookCardProps) {
-  const { books, addToReadingList, removeFromReadingList, readingList } = useBookContext();
+  const { addToReadingList, removeFromReadingList, readingList } = useBookContext();
   const [open, setOpen] = useState(false);
 
 

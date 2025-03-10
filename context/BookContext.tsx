@@ -1,6 +1,5 @@
 'use client';
 
-// /contexts/BookContext.tsx
 import { createContext, useState, useContext, ReactNode } from "react";
 
 export interface Book {
@@ -34,7 +33,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/4671.The_Great_Gatsby",
       storeUrl: "https://www.amazon.com/Great-Gatsby-F-Scott-Fitzgerald/dp/0743273567",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -45,7 +44,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/5470.1984",
       storeUrl: "https://www.amazon.com/1984-Signet-Classics-George-Orwell/dp/0451524934",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -56,7 +55,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird",
       storeUrl: "https://www.amazon.com/Kill-Mockingbird-Harper-Lee/dp/0061120081",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -67,7 +66,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/1885.Pride_and_Prejudice",
       storeUrl: "https://www.amazon.com/Pride-Prejudice-Jane-Austen/dp/1503290565",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -78,7 +77,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/153747.Moby_Dick_or_the_Whale",
       storeUrl: "https://www.amazon.com/Moby-Dick-Herman-Melville/dp/1503280780",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -89,7 +88,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/656.War_and_Peace",
       storeUrl: "https://www.amazon.com/War-Peace-Leo-Tolstoy/dp/1420958613",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -100,7 +99,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/5107.The_Catcher_in_the_Rye",
       storeUrl: "https://www.amazon.com/Catcher-Rye-J-D-Salinger/dp/0316769487",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -111,7 +110,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings",
       storeUrl: "https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -122,7 +121,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/5907.The_Hobbit",
       storeUrl: "https://www.amazon.com/Hobbit-J-R-R-Tolkien/dp/054792822X",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -133,7 +132,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone",
       storeUrl: "https://www.amazon.com/Harry-Potter-Sorcerers-Stone-Rowling/dp/059035342X",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -144,7 +143,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/100915.The_Lion_the_Witch_and_the_Wardrobe",
       storeUrl: "https://www.amazon.com/Lion-Witch-Wardrobe-C-S-Lewis/dp/0064404994",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -155,7 +154,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/7613.Animal_Farm",
       storeUrl: "https://www.amazon.com/Animal-Farm-George-Orwell/dp/0451526341",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -166,7 +165,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/7144.Crime_and_Punishment",
       storeUrl: "https://www.amazon.com/Crime-Punishment-Fyodor-Dostoyevsky/dp/0486415872",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -177,7 +176,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/320.One_Hundred_Years_of_Solitude",
       storeUrl: "https://www.amazon.com/One-Hundred-Years-Solitude-Harperperennial/dp/0060883286",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -188,7 +187,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/5129.Brave_New_World",
       storeUrl: "https://www.amazon.com/Brave-New-World-Aldous-Huxley/dp/0060850523",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -199,7 +198,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/10210.Jane_Eyre",
       storeUrl: "https://www.amazon.com/Jane-Eyre-Charlotte-Bront/dp/0141441143",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -210,7 +209,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/6183.Wuthering_Heights",
       storeUrl: "https://www.amazon.com/Wuthering-Heights-Emily-Bronte/dp/0141439556",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -221,7 +220,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/1381.The_Odyssey",
       storeUrl: "https://www.amazon.com/Odyssey-Homer/dp/0140268863",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -232,7 +231,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/3836.Don_Quixote",
       storeUrl: "https://www.amazon.com/Don-Quixote-Miguel-de-Cervantes/dp/0060934344",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     },
@@ -243,7 +242,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       goodreadsUrl: "https://www.goodreads.com/book/show/880.The_Divine_Comedy",
       storeUrl: "https://www.amazon.com/Divine-Comedy-Dante-Alighieri/dp/0142437220",
       notes: [
-        "Hello moto"
+        
       ],
       imageUrl: "https://placehold.co/320x480/png"
     }

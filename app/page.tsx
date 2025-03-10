@@ -4,7 +4,7 @@ import { useBookContext } from "../context/BookContext";
 import { BookCard } from "./book";
 
 export default function Home() {
-  const { books, addToReadingList } = useBookContext();
+  const { books } = useBookContext();
 
   return (
     <div className="p-4">
