@@ -6,7 +6,7 @@ import Image from "next/image"
 import React from "react"
 
 import { useBookContext } from "../../../context/BookContext"
-import { useState, use } from "react"
+import { use } from "react"
 import { Button } from "@/components/ui/button"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
