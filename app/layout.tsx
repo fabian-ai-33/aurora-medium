@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
+import { BookProvider } from "../context/BookContext";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";  
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +39,30 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <BookProvider>
+          <div className="container mx-auto">
+            <NavigationMenu>
+                <NavigationMenuList>
+                <NavigationMenuItem>
+                    <Link href="/" legacyBehavior passHref>
+                    <NavigationMenuLink>
+                        Home
+                    </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <Link href="/reading-list" legacyBehavior passHref>
+                    <NavigationMenuLink>
+                        Reading List
+                    </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
+            {children}
+          </div>
+        </BookProvider>
       </body>
     </html>
   );
