@@ -27,7 +27,7 @@ export default function ReadingList() {
 
     const readingBooks = books.filter((book) => readingList.includes(book.id))
 
-    const shareUrl = `${window.location.origin}/public/reading-list`
+    const shareUrl = `/public/reading-list`
 
     return (
         <div className="p-4">
