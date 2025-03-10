@@ -12,7 +12,7 @@ export default function Home() {
       <p className="mb-4">
         Here are some books you might like. Click to view the book, add notes or add them to your reading list.
       </p>
-      <div className="grid md:grid-cols-4 gap-4">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 justify-items-center">
         {books.map((book) => (
           <BookCard
             key={book.id}
