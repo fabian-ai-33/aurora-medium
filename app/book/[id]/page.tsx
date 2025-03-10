@@ -22,8 +22,7 @@ export default function BookDetail(props: {
 }) {
   const { id } = use(props.params)
 
-  const { books, addNote, addToReadingList } = useBookContext()
-  const [note, setNote] = useState("")
+  const { books, addNote } = useBookContext()
 
   const FormSchema = z.object({
     note: z.string().min(1, {
@@ -45,7 +44,6 @@ export default function BookDetail(props: {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     addNote(book!.id, data.note)
     form.reset()
-    setNote("")
   }
 
   return (
