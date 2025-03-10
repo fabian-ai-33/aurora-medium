@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BookProvider } from "../context/BookContext";
+import { Toaster } from "@/components/ui/sonner";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,7 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";  
+} from "@/components/ui/navigation-menu";
 import Link from "next/link";
 
 const geistSans = Geist({
@@ -41,25 +42,40 @@ export default function RootLayout({
       >
         <BookProvider>
           <div className="container mx-auto">
-            <NavigationMenu>
+            <div className="border-b border-gray-200 py-4 mb-4">
+              <NavigationMenu>
                 <NavigationMenuList>
-                <NavigationMenuItem>
+                  <NavigationMenuItem>
                     <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink>
+                      <NavigationMenuLink>
                         Home
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
                     </Link>
-                </NavigationMenuItem>
+                  </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                  <NavigationMenuItem>
                     <Link href="/reading-list" legacyBehavior passHref>
-                    <NavigationMenuLink>
+                      <NavigationMenuLink>
                         Reading List
-                    </NavigationMenuLink>
+                      </NavigationMenuLink>
                     </Link>
-                </NavigationMenuItem>
+                  </NavigationMenuItem>
                 </NavigationMenuList>
-            </NavigationMenu>
+
+                <NavigationMenuList className="">
+                  <NavigationMenuItem>
+                    <Link href="/public/reading-list" legacyBehavior passHref>
+                      <NavigationMenuLink>
+                        Public Reading List
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            <Toaster />
+
             {children}
           </div>
         </BookProvider>

@@ -1,109 +1,106 @@
-'use client';
-import Link from "next/link";
-import { useBookContext } from "@/context/BookContext";
-import { Button } from "@/components/ui/button";
-import { Link as LinkIcon } from "lucide-react";
+"use client"
+
+import Link from "next/link"
+import { useBookContext } from "@/context/BookContext"
+import { Button } from "@/components/ui/button"
+import { CopyIcon, LinkIcon } from "lucide-react"
+import { BookCard } from "../book"
+import { useState } from "react"
+import copy from "copy-to-clipboard"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogClose,
+} from "@/components/ui/dialog"
+
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function ReadingList() {
-    const {
-        books,
-        readingList,
-        removeFromReadingList,
-        sharingEnabled,
-        toggleSharing,
-    } = useBookContext();
-    
-    const readingBooks = books.filter((book) =>
-        readingList.includes(book.id)
-);
+  const { books, readingList, removeFromReadingList, sharingEnabled, toggleSharing } = useBookContext()
+  const [showShareDialog, setShowShareDialog] = useState(false)
 
-return (
-    <div className="">
-    <h1 className="text-3xl font-bold">My Reading List</h1>
-    
-    
-    <div className="flex ...">
-    <div className="flex-1 ...">
-    
-    </div>
-    <div className="flex-1 text-right ...">
-        {sharingEnabled && (
-    <Button variant="outline" className="ml-2 mr-2">
-        <LinkIcon /> Share My List
-    </Button>
-    )}
-    
-    <Button onClick={toggleSharing}>
-    <LinkIcon /> {sharingEnabled ? "Disable Sharing" : "Enable Sharing"}
-    </Button>
+  const readingBooks = books.filter((book) => readingList.includes(book.id))
 
-    <p className="text-sm text-gray-600 mt-2">
-        {sharingEnabled
-            ? "Your reading list is shared with others."
-            : "Your reading list is private."}
+  const shareUrl = `${window.location.origin}/public/reading-list`
+
+  return (
+    <div className="p-4">
+      <Dialog open={showShareDialog} onOpenChange={() => setShowShareDialog(false)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Share link</DialogTitle>
+            <DialogDescription>Anyone who has this link will be able to view this.</DialogDescription>
+          </DialogHeader>
+          <div className="flex items-center space-x-2">
+            <div className="grid flex-1 gap-2">
+              <Label htmlFor="link" className="sr-only">
+                Link
+              </Label>
+              <Input id="link" defaultValue={shareUrl} readOnly />
+            </div>
+            <Button onClick={() => copy(shareUrl)} type="submit" size="sm" className="px-3">
+              <span className="sr-only">Copy</span>
+              <CopyIcon className="h-4 w-4" />
+            </Button>
+          </div>
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>
+              <Button type="button" variant="secondary">
+                Close
+              </Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 mb-6">
+        <div className="flex-1">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">My Reading List</h1>
+          <p className="mb-4 text-sm sm:text-base">
+            {sharingEnabled ? "Your reading list is shared with others." : "Your reading list is private."}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 sm:text-right sm:justify-end">
+          {sharingEnabled && (
+            <Button onClick={() => setShowShareDialog(true)} variant="outline" className="w-full sm:w-auto">
+              <LinkIcon className="h-4 w-4 mr-2" /> Share My List
+            </Button>
+          )}
+
+          <Button onClick={toggleSharing} className="w-full sm:w-auto">
+            {sharingEnabled ? "Disable Sharing" : "Enable Sharing"}
+          </Button>
+        </div>
+      </div>
+
+      {readingBooks.length === 0 ? (
+        <div className="flex flex-col items-center justify-center px-4 py-8">
+          <div className="mx-auto max-w-md space-y-4 text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+              No books in your list
+            </h1>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+              Add some books to your reading list to see them here.
             </p>
-    {sharingEnabled && <Link href="/share">
-        
-        </Link>}
+            <Link href="/" className="block mt-4">
+              <Button className="w-full sm:w-auto">View Books</Button>
+            </Link>
+          </div>
         </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {readingBooks.map((book) => (
+            <BookCard key={book.id} {...book} />
+          ))}
         </div>
-        
-            
-            <div className="mt-4">
-            
-            </div>
-            {readingBooks.length === 0 ? (
-                <p className="mt-4">Your reading list is empty.</p>
-            ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                {readingBooks.map((book) => (
-                    <div
-                    key={book.id}
-                    className="border p-4 rounded shadow hover:shadow-lg transition"
-                    >
-                    <h2 className="text-2xl font-semibold">{book.title}</h2>
-                    <p className="text-gray-600">by {book.author}</p>
-                    <div className="flex space-x-2 mt-2">
-                    <a
-                    href={book.goodreadsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
-                    >
-                    Goodreads
-                    </a>
-                    <a
-                    href={book.storeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 underline"
-                    >
-                    Buy
-                    </a>
-                    </div>
-                    {sharingEnabled && book.notes.length > 0 && (
-                        <div className="mt-4">
-                        <h3 className="font-semibold">Notes:</h3>
-                        <ul className="list-disc ml-6">
-                        {book.notes.map((note, idx) => (
-                            <li key={idx}>{note}</li>
-                        ))}
-                        </ul>
-                        </div>
-                    )}
-                    <div className="mt-4">
-                    <Button
-                    variant="destructive"
-                    onClick={() => removeFromReadingList(book.id)}
-                    >
-                    Remove from List
-                    </Button>
-                    </div>
-                    </div>
-                ))}
-                </div>
-            )}
-            </div>
-        );
-    }
-    
+      )}
+    </div>
+  )
+}
+
