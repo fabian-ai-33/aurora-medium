@@ -61,7 +61,7 @@ export default function ReadingList() {
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 mb-6">
                 <div className="flex-1">
-                    <h1 className="text-2xl sm:text-3xl font-bold mb-2">My Reading List</h1>
+                    <h1 className="text-2xl sm:text-3xl font-bold mb-4">My Reading List</h1>
                     <p className="mb-4 text-sm sm:text-base">
                         {sharingEnabled ? "Your reading list is shared with others." : "Your reading list is private."}
                     </p>

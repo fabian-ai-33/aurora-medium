@@ -45,6 +45,9 @@ export default function PublicReadingList() {
     return (
         <div className="p-4">
             <h1 className="text-3xl font-bold mb-4">Public Reading List</h1>
+            <p className="mb-4 text-sm sm:text-base">
+                {readingBooks.length} books in this list.
+            </p>
             {readingBooks.length === 0 ? (
                 <div className="flex flex-col items-center justify-center px-4">
                     <div className="mx-auto max-w-md space-y-4 text-center">
