@@ -35,7 +35,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "2",
@@ -46,7 +46,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "3",
@@ -57,7 +57,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "4",
@@ -68,7 +68,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "5",
@@ -79,7 +79,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "6",
@@ -90,7 +90,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "7",
@@ -101,7 +101,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "8",
@@ -112,7 +112,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "9",
@@ -123,7 +123,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "10",
@@ -134,7 +134,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "11",
@@ -145,7 +145,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "12",
@@ -156,7 +156,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "13",
@@ -167,7 +167,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "14",
@@ -178,7 +178,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "15",
@@ -189,7 +189,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "16",
@@ -200,7 +200,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "17",
@@ -211,7 +211,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "18",
@@ -222,7 +222,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "19",
@@ -233,7 +233,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     },
     {
       id: "20",
@@ -244,7 +244,7 @@ export const BookProvider = ({ children }: { children: ReactNode }) => {
       notes: [
         
       ],
-      imageUrl: "https://placehold.co/320x480/png"
+      imageUrl: "/placeholder.svg?height=480&width=320"
     }
   ]);
 
